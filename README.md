@@ -8,7 +8,7 @@ necessary resources, process data, and generate insightful reports.
 - Create the following Azure resources:
   - Databricks workspace.
   - Storage account with three empty containers: Landing, Staging, and Reporting.
-- Download the 'orders.csv' and 'customers.csv' datasets from the portal and upload them to the Landing container of the storage account.
+- Upload 'orders.csv' and 'customers.csv' to the Landing container of the storage account.
 ### Step 2: Databricks Workspace and Cluster Configuration
 - Launch the Azure Databricks workspace.
 - Create a single-node cluster inside the workspace that terminates after 30 minutes of inactivity. Choose 'Standard_DS3_v2' with a configuration of 14GB RAM and 4 cores.
@@ -16,7 +16,7 @@ necessary resources, process data, and generate insightful reports.
 - Create a notebook in the Databricks workspace.
 - Execute the following tasks in the notebook:
   -Mount the Azure Storage to DBFS and mount all three containers.
-  -Create Spark DataFrames for 'orders' and 'customers' data, enforcing the schema as provided in 'Week11_Dataframe_Schema.txt.'
+  -Create Spark DataFrames for 'orders' and 'customers' data and enforce the schema 
   -Write a Spark transformation on the 'orders' DataFrame to add new columns 'order_year' and 'order_month' by extracting them from 'orders_date.'
   -Store the transformed 'orders' and 'customers' data in a suitable format to optimize storage and query performance, considering partitioning based on 'order_year,' 'order_status,' and 'state' from the customers' data.
 ### Step 4: Data Analysis and Reporting
