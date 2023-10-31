@@ -1,0 +1,22 @@
+orders
+========
+4 columns
+Schema:
+order_id string,
+order_date date,
+order_customer_id string,
+order_status string
+
+customers
+==========
+9 columns
+Schema:
+customer_id string,
+customer_fname string,
+customer_lname string,
+customer_email string,
+customer_password string,
+customer_street string,
+customer_city string,
+customer_state string,
+customer_zipcode string
