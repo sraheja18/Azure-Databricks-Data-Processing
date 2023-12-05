@@ -15,10 +15,10 @@ necessary resources, process data, and generate insightful reports.
 ### Step 3: Data Processing and Transformation
 - Create a notebook in the Databricks workspace.
 - Execute the following tasks in the notebook:
-  -Mount the Azure Storage to DBFS and mount all three containers.
-  -Create Spark DataFrames for 'orders' and 'customers' data and enforce the schema 
-  -Write a Spark transformation on the 'orders' DataFrame to add new columns 'order_year' and 'order_month' by extracting them from 'orders_date.'
-  -Store the transformed 'orders' and 'customers' data in a suitable format to optimize storage and query performance, considering partitioning based on 'order_year,' 'order_status,' and 'state' from the customers' data.
+  - Mount the Azure Storage to DBFS and mount all three containers.
+  - Create Spark DataFrames for 'orders' and 'customers' data and enforce the schema 
+  - Write a Spark transformation on the 'orders' DataFrame to add new columns 'order_year' and 'order_month' by extracting them from 'orders_date.'
+  - Store the transformed 'orders' and 'customers' data in a suitable format to optimize storage and query performance, considering partitioning based on 'order_year,' 'order_status,' and 'state' from the customers' data.
 ### Step 4: Data Analysis and Reporting
 - Create Spark DataFrames for 'customers' and 'orders' using data from the Staging container.
 - Write optimized queries to retrieve details of customers, combining data from both tables, and perform an optimized join.
